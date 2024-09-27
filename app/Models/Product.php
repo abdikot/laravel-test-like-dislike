@@ -16,4 +16,16 @@ class Product extends Model
         'description',
         'price',
     ];
+
+    public function likes() {
+        return $this->hasMany(Like::class);
+    }
+
+    public function getLikesCountAttribute() {
+        return $this->likes()->where('is_like', true)->count();
+    }
+
+    public function getDisLikesCountAttribute() {
+        return $this->likes()->where('is_like', false)->count();
+    }
 }
