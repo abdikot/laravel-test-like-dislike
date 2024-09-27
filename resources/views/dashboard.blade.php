@@ -21,7 +21,7 @@
                         <div class="product-container mb-6 border-b pb-4" data-product-id="{{ $product->id }}">
                             <h4 class="text-lg font-bold">{{ $product->name }}</h4>
                             <p class="text-gray-600">{{ $product->description }}</p>
-                            <p class="text-gray-800">Price: ${{ $product->price }}</p>
+                            <p class="text-gray-800">Price: Rp {{ $product->price }}.000</p>
 
                             <div class="mt-4">
                                 <button class="like-btn bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" 
