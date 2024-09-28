@@ -7,13 +7,7 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900">
-                    {{ __("You're logged in!") }}
-                </div>
-            </div>
-
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg mt-6">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg mt-1">
                 <div class="p-6 text-gray-900">
                     <h3 class="font-semibold text-xl mb-4">Products</h3>
 
@@ -27,12 +21,12 @@
                                 <button class="like-btn bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" 
                                         data-product-id="{{ $product->id }}" 
                                         data-like="1">
-                                    Like ({{ $product->likes_count }})
+                                        <i class="fa-regular fa-thumbs-up"></i> Like ({{ $product->likes_count }}) 
                                 </button>
                                 <button class="dislike-btn bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" 
                                         data-product-id="{{ $product->id }}" 
                                         data-like="0">
-                                    Dislike ({{ $product->dislikes_count }})
+                                        <i class="fa-regular fa-thumbs-down"></i> Dislike ({{ $product->dislikes_count }})
                                 </button>
                             </div>
                         </div>
